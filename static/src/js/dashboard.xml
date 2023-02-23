@@ -3,7 +3,9 @@
     <t t-name="tutorial_dashboard.client_action" owl="1">
         <Layout display="display">
             <t t-set-slot="control-panel-bottom-left">
-                Hello vyngt
+                <button class="btn btn-success" t-on-click="open_librarian">Librarian</button>
+                <button class="btn btn-success" t-on-click="open_active_books">Active Books</button>
+                <button class="btn btn-success" t-on-click="open_dead_books">Dead Books</button>
             </t>
         </Layout>
     </t>

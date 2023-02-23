@@ -10,7 +10,7 @@
     "website": "https://github.com/vyngt",
     "category": "Website/Library",
     "version": "16.0.1.0.0",
-    "depends": ["base", "web", "tutorial"],
+    "depends": ["base", "web", "tutorial", "tutorial_member"],
     "data": [
         # 'security/ir.model.access.csv',
         # "views/views.xml",
