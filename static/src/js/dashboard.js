@@ -22,12 +22,12 @@ export class TutorialDashboard extends Component {
       controlPanel: { "top-right": false, "bottom-right": false },
     };
     this.action = useService("action");
-    this.rpc = useService("rpc");
+    this.tutorial_service = useService("tutorial_service");
     this.key_to_string = {
       count: "Number of books",
     };
     onWillStart(async () => {
-      this.statistics = await this.rpc("/tutorial/rpc/library/books");
+      this.statistics = await this.tutorial_service.load_statistics();
     });
   }
 
