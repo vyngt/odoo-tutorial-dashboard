@@ -8,7 +8,7 @@ export const tutorial_service = {
   async: ["load_statistics"],
   start(env, { rpc }) {
     return {
-      load_statistics: memoize(() => rpc("/tutorial/rpc/library/books")),
+      load_statistics: memoize(() => rpc("/tutorial/rpc/library/statistics")),
     };
   },
 };

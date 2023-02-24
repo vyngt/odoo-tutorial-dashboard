@@ -7,6 +7,7 @@ import { Domain } from "@web/core/domain";
 import { getDefaultConfig } from "@web/views/view";
 
 import { Card } from "./components/card/card";
+import { PieChart } from "./components/pie_chart/pie_chart";
 
 const { Component, useSubEnv, onWillStart } = owl;
 
@@ -59,7 +60,7 @@ export class TutorialDashboard extends Component {
   }
 }
 
-TutorialDashboard.components = { Layout, Card };
+TutorialDashboard.components = { Layout, Card, PieChart };
 TutorialDashboard.template = "tutorial_dashboard.client_action";
 
 registry

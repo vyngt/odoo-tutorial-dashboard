@@ -9,6 +9,12 @@
             </t>
         </Layout>
         <t t-call="tutorial_dashboard.client_action.statistics" />
+        <div class="m-3">
+            <Card class_name="'w-25'">
+                <t t-set-slot="title">By State</t>
+                <PieChart data="statistics['by_state']" label="'By States'"/>
+            </Card>
+        </div>
 
     </t>
     <t t-name="tutorial_dashboard.client_action.statistics" owl="1">
