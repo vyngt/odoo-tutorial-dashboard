@@ -6,7 +6,9 @@ import { useService } from "@web/core/utils/hooks";
 import { Domain } from "@web/core/domain";
 import { getDefaultConfig } from "@web/views/view";
 
-const { Component, useSubEnv } = owl;
+import { Card } from "./components/card/card";
+
+const { Component, useSubEnv, onWillStart } = owl;
 
 export class TutorialDashboard extends Component {
   setup() {
@@ -20,6 +22,13 @@ export class TutorialDashboard extends Component {
       controlPanel: { "top-right": false, "bottom-right": false },
     };
     this.action = useService("action");
+    this.rpc = useService("rpc");
+    this.key_to_string = {
+      count: "Number of books",
+    };
+    onWillStart(async () => {
+      this.statistics = await this.rpc("/tutorial/rpc/library/books");
+    });
   }
 
   open_librarian() {
@@ -50,7 +59,7 @@ export class TutorialDashboard extends Component {
   }
 }
 
-TutorialDashboard.components = { Layout };
+TutorialDashboard.components = { Layout, Card };
 TutorialDashboard.template = "tutorial_dashboard.client_action";
 
 registry

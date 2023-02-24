@@ -8,5 +8,17 @@
                 <button class="btn btn-success" t-on-click="open_dead_books">Dead Books</button>
             </t>
         </Layout>
+        <t t-call="tutorial_dashboard.client_action.statistics" />
+
+    </t>
+    <t t-name="tutorial_dashboard.client_action.statistics" owl="1">
+        <div class="d-flex flex-nowrap">
+            <div t-foreach="key_to_string" t-as="key" t-key="key" class="m-2">
+                <Card>
+                    <t t-set-slot="title"><t t-esc="key_to_string[key]"/></t>
+                    <p class="card-text"><t t-esc="statistics[key]"/></p>
+                </Card>   
+            </div>      
+        </div>
     </t>
 </templates>

@@ -1,18 +1,14 @@
 # -*- coding: utf-8 -*-
 
-# from odoo import models, fields, api
+from odoo import models, fields, api
 
 
-# class tutorial_dashboard(models.Model):
-#     _name = 'tutorial_dashboard.tutorial_dashboard'
-#     _description = 'tutorial_dashboard.tutorial_dashboard'
+class TutorialLibraryBook(models.Model):
+    _inherit = "tutorial.library.book"
 
-#     name = fields.Char()
-#     value = fields.Integer()
-#     value2 = fields.Float(compute="_value_pc", store=True)
-#     description = fields.Text()
-#
-#     @api.depends('value')
-#     def _value_pc(self):
-#         for record in self:
-#             record.value2 = float(record.value) / 100
+    @api.model
+    def get_statistics(self):
+        count = self.search_count([])
+        return {
+            "count": count,
+        }
