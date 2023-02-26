@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+    <t t-name="tutorial_dashboard.IsAvailableField" t-inherit="web.BooleanField" owl="1">
+        <xpath expr="//CheckBox" position="after">
+            <span t-if="props.value" class="text-success">Available!</span>
+            <span t-else="" class="text-warning">Not Available!</span>
+        </xpath>
+    </t>
+</templates>

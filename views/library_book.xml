@@ -11,8 +11,20 @@
         </field>
     </record> -->
 
+    <!-- tutorial_view_form_book_extend -->
+    <record id="tutorial_view_form_book_modify" model="ir.ui.view">
+        <field name="name">Available widget</field>
+        <field name="model">tutorial.library.book</field>
+        <field name="inherit_id" ref="tutorial_member.tutorial_view_form_book_extend" />
+        <field name="arch" type="xml">
+            <field name="is_available" position="attributes">
+                <attribute name="widget">is_available_boolean</attribute>
+            </field>
+        </field>
+    </record>
 </odoo>
 
+<!-- image_preview -->
 <!-- Using something like this, for Char, not Binary -->
 <!-- <field name="image_url" position="attributes">  
     <attribute name="widget">image_preview</attribute> 
