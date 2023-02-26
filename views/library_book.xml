@@ -1,0 +1,19 @@
+<odoo>
+    <!-- tutorial_view_form_book -->
+    <!-- <record id="tutorial_view_form_book_modify" model="ir.ui.view">
+        <field name="name">Book: add Is Available? field</field>
+        <field name="model">tutorial.library.book</field>
+        <field name="inherit_id" ref="tutorial.tutorial_view_form_book" />
+        <field name="arch" type="xml">
+            <field name="image" position="attributes">  
+                <attribute name="widget">image_preview</attribute> 
+            </field>
+        </field>
+    </record> -->
+
+</odoo>
+
+<!-- Using this snippet for modified image -->
+<!-- <field name="image" position="attributes">  
+    <attribute name="widget">image_preview</attribute> 
+</field> -->
