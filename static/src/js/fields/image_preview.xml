@@ -2,6 +2,10 @@
 <templates xml:space="preserve">
     <t t-name="tutorial_dashboard.ImagePreviewField" owl="1">
         <CharField t-props="props"/>
+        <!-- Simple logic if -->
+        <t t-if="props.value.length === 0">
+            <p class="text-danger">MISSING IMAGE</p>
+        </t>
         <img t-att-src="props.value"/>
     </t>
 </templates>
