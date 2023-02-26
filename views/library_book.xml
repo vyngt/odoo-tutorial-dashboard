@@ -13,7 +13,7 @@
 
 </odoo>
 
-<!-- Using this snippet for modified image -->
-<!-- <field name="image" position="attributes">  
+<!-- Using something like this, for Char, not Binary -->
+<!-- <field name="image_url" position="attributes">  
     <attribute name="widget">image_preview</attribute> 
 </field> -->
